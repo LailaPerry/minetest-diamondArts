@@ -28,7 +28,7 @@ minetest.register_node("diamond_arts:fake_diamond_glass", {
 	tiles = {"turney_fake-diamond-glass.png"},
 	is_ground_content = false,
 	sunlight_propagates = true,
-	sounds = default.node_sound_glass_defaults(),
+	-- sounds = default.node_sound_glass_defaults(),
 	groups = {cracky=3,oddly_breakable_by_hand=3},
 })
 minetest.register_craft({
@@ -58,7 +58,7 @@ minetest.register_node("diamond_arts:fake_diamond_ladder", {
 	},
 	groups = {choppy = 2, oddly_breakable_by_hand = 3, flammable = 2},
 	legacy_wallmounted = true,
-	sounds = default.node_sound_wood_defaults(),
+	-- sounds = default.node_sound_wood_defaults(),
 })
 minetest.register_craft({
 	type=shaped,
