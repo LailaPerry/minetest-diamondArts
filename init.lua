@@ -2,7 +2,7 @@
 
 minetest.register_node("diamond_arts:fake_diamond_block", {
 	description = "fake diamond block",
-	tiles = {"turney_fake-diamond-block.png"},
+	tiles = {"diamond_arts-block.png"},
 		is_ground_content = false,
 		groups = {cracky=3, stone=4}
 })
@@ -25,7 +25,7 @@ minetest.register_node("diamond_arts:fake_diamond_glass", {
 	description = "fake diamond glass",
 	drawtype = "glasslike",
 	paramtype = "light",
-	tiles = {"turney_fake-diamond-glass.png"},
+	tiles = {"diamond_arts-glassblock.png"},
 	is_ground_content = false,
 	sunlight_propagates = true,
 	-- sounds = default.node_sound_glass_defaults(),
@@ -41,8 +41,8 @@ minetest.register_craft({
 minetest.register_node("diamond_arts:fake_diamond_ladder", {
 	description = "fake diamond ladder",
 	drawtype = "signlike",
-	tiles = {"diamond_arts_fake-diamond-ladder.png"},
-	inventory_image = "diamond_arts_fake-diamond-ladder.png",
+	tiles = {"diamond_arts-ladder.png"},
+	inventory_image = "diamond_arts-ladder.png",
 	wield_image = "diamond_arts_fake-diamond-ladder.png",
 	paramtype = "light",
 	paramtype2 = "wallmounted",
