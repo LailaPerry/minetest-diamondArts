@@ -1,35 +1,32 @@
 
-
 minetest.register_node("diamond_arts:fake_diamond_block", {
-	description = "fake diamond block",
+	description = "Faux Diamond Block",
 	tiles = {"diamond_arts-block.png"},
-		is_ground_content = false,
-		groups = {cracky=3, stone=4}
-})
-minetest.register_craft({
-	type = "shapeless",
-	output = "diamond_arts:fake_diamond_block 1",
-	recipe = {
-		"dye:blue",
-		"dye:black",
-		"dye:blue",
-		"default:pine_wood ",
-		"default:pine_wood ",
-		"default:pine_wood ",
-		"default:pine_wood ",
-		"default:pine_wood ",
-		"default:pine_wood ",
-	},
-})
-minetest.register_node("diamond_arts:fake_diamond_glass", {
-	description = "fake diamond glass",
-	drawtype = "glasslike",
-	paramtype = "light",
-	tiles = {"diamond_arts-glassblock.png"},
 	is_ground_content = false,
+	groups = {cracky = 3},
+	sounds = default.node_sound_stone_defaults(),
+})
+
+minetest.register_craft({
+	output = "diamond_arts:fake_diamond_block 4",
+	recipe = {
+		{"default:glass", "default:stone", "default:glass"},
+		{"default:stone", "dye:cyan", "default:stone"},
+		{"default:glass", "default:stone", "default:glass"},
+	}
+})
+
+
+minetest.register_node("diamond_arts:fake_diamond_glass", {
+        description = ("Faux Diamond Glass"),
+	drawtype = "glasslike_framed_optional",
+	tiles = {"diamond_arts-glassblock.png", "diamond_arts-glassblock-detail.png"},
+	use_texture_alpha = "clip", 
+	paramtype = "light",
 	sunlight_propagates = true,
-	-- sounds = default.node_sound_glass_defaults(),
-	groups = {cracky=3,oddly_breakable_by_hand=3},
+	is_ground_content = false,
+	groups = {cracky = 3, oddly_breakable_by_hand = 3},
+	sounds = default.node_sound_glass_defaults(),
 })
 minetest.register_craft({
 	type = "cooking",
@@ -39,7 +36,7 @@ minetest.register_craft({
 })
 
 minetest.register_node("diamond_arts:fake_diamond_ladder", {
-	description = "fake diamond ladder",
+	description = "Faux Diamond Ladder",
 	drawtype = "signlike",
 	tiles = {"diamond_arts-ladder.png"},
 	inventory_image = "diamond_arts-ladder.png",
@@ -56,13 +53,13 @@ minetest.register_node("diamond_arts:fake_diamond_ladder", {
 		--wall_bottom = = <default>
 		--wall_side = = <default>
 	},
-	groups = {choppy = 2, oddly_breakable_by_hand = 3, flammable = 2},
+	groups = {cracky = 3, oddly_breakable_by_hand = 3, flammable = 2},
 	legacy_wallmounted = true,
-	-- sounds = default.node_sound_wood_defaults(),
+	sounds = default.node_sound_stone_defaults(),
 })
 minetest.register_craft({
 	type=shaped,
-	output = "diamond_arts:fake_diamond_ladder",
+	output = "diamond_arts:fake_diamond_ladder 5",
 	recipe = {{"diamond_arts:fake_diamond_block",""                               ,"diamond_arts:fake_diamond_block"},
 		  {"diamond_arts:fake_diamond_block","diamond_arts:fake_diamond_block","diamond_arts:fake_diamond_block"},
 		  {"diamond_arts:fake_diamond_block",""                               ,"diamond_arts:fake_diamond_block"}}
